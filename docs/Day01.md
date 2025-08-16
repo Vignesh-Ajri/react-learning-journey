@@ -58,16 +58,13 @@ Add the @tailwindcss/vite plugin to your Vite configuration.
 Update `vite.config.js`:
 
 ```js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
-})
+  plugins: [react(), tailwindcss()],
+});
 ```
 
 ### 3. Add Tailwind to CSS
@@ -92,10 +89,10 @@ function App() {
         Hello World, React Journey Begins 🚀
       </h1>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
 ```
 
 ---
@@ -132,17 +129,17 @@ export default function Day01HelloWorld() {
 Update `src/App.jsx`:
 
 ```jsx
-import Day01HelloWorld from './days/Day01-HelloWorld'
+import Day01HelloWorld from "./days/Day01-HelloWorld";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Day01HelloWorld />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
 ```
 
 ---
@@ -153,4 +150,3 @@ export default App
 2. Open `http://localhost:5173`
 3. You should see your Hello World component with styling
 4. Make a small change and verify hot reload works
-

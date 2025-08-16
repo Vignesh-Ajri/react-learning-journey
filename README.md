@@ -10,3 +10,11 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 📚 All Learning Resources
+
+- **Vite + React setup**  
+  [How to Install React in 2023 – Goodbye Create React App (Vite React Project)](https://youtu.be/agpZsCUllqc)
+
+- **Tailwind CSS setup (optional for styling today or later)**  
+  [How to Install Tailwind CSS in Vite React JS (2025)](https://youtu.be/qkbijl5EoHc?si)
