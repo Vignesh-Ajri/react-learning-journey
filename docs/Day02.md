@@ -3,6 +3,7 @@
 ## ReactJS Tutorial – Components
 
 [Watch the ReactJS Tutorial – Components on YouTube](https://youtu.be/Y2hgEGPzTZY)
+[Watch the ReactJS Tutorial – JSX on YouTube](https://youtu.be/7fPXI_MnBOY)
 
 ## What I Learned
 
