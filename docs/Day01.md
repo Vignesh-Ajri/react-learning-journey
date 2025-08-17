@@ -43,7 +43,7 @@ Your app should now be running at `http://localhost:5173`
 
 ##
 
-````Folder Strucure
+```Folder Strucure
 react-learning-journey/
 │── src/
 │   ├── days/
@@ -69,7 +69,7 @@ Install tailwindcss and @tailwindcss/vite via npm.
 
 ```bash
 npm install tailwindcss @tailwindcss/vite
-````
+```
 
 ### 2. Configure Vite
 
