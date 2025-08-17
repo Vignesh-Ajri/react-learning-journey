@@ -61,6 +61,8 @@ react-learning-journey/
 
 ```
 
+##
+
 ## (Optional) Tailwind CSS Setup
 
 ### 1. Install Tailwind CSS
