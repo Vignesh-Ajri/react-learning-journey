@@ -43,15 +43,12 @@ Your app should now be running at `http://localhost:5173`
 
 ##
 
-```Folder Strucure
+```jsx
 react-learning-journey/
 │── src/
 │   ├── days/
 │   │   ├── Day01-HelloWorld.jsx
 │   │   ├── Day02-JSX-Components.jsx
-│   │   ├── Day03-Props.jsx
-│   │   ├── Day04-State.jsx
-│   │   ├── Day05-Events.jsx
 │   │   └── ...
 │   ├── App.jsx   # import whichever Day component you want
 │   └── main.jsx
