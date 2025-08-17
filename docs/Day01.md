@@ -41,6 +41,26 @@ Your app should now be running at `http://localhost:5173`
 
 ---
 
+##
+
+````Folder Strucure
+react-learning-journey/
+│── src/
+│   ├── days/
+│   │   ├── Day01-HelloWorld.jsx
+│   │   ├── Day02-JSX-Components.jsx
+│   │   ├── Day03-Props.jsx
+│   │   ├── Day04-State.jsx
+│   │   ├── Day05-Events.jsx
+│   │   └── ...
+│   ├── App.jsx   # import whichever Day component you want
+│   └── main.jsx
+│
+│── package.json
+│── README.md
+
+```
+
 ## (Optional) Tailwind CSS Setup
 
 ### 1. Install Tailwind CSS
@@ -49,7 +69,7 @@ Install tailwindcss and @tailwindcss/vite via npm.
 
 ```bash
 npm install tailwindcss @tailwindcss/vite
-```
+````
 
 ### 2. Configure Vite
 
