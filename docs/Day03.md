@@ -1,5 +1,9 @@
 # Day 03 – Props in React
 
+## ReactJS Tutorial – Props
+
+[Watch the ReactJS Tutorial – Props on YouTube](https://youtu.be/m7OWXtbiXX8)
+
 ## 🔹 What are Props?
 
 - Props = short for properties.
