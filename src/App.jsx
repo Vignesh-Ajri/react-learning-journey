@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Day01 from "./days/Day01-HelloWorld";
 import Day02 from "./days/Day02-JSX-Component";
+import { FunctionalComponent, ClassComponent, Card } from "./days/Day03-Props";
 
 function App() {
   return (
@@ -35,8 +36,21 @@ function App() {
         <Routes>
           <Route path="/day01" element={<Day01 />} />
           <Route path="/day02" element={<Day02 />} />
+          <Route
+            path="/day03"
+            element={
+              <>
+                <FunctionalComponent name="Joe" />
+                <ClassComponent name="Joe" />
+
+                <Card title="Children Example">
+                  <p>This paragraph is passed as children!</p>
+                  <button>Click Me</button>
+                </Card>
+              </>
+            }
+          />
           {/* <Route path="/day03" element={<Day03 />} />
-          <Route path="/day04" element={<Day04 />} />
           <Route path="/day05" element={<Day05 />} /> */}
         </Routes>
       </div>
