@@ -48,7 +48,7 @@ export function Card({ title, children }) {
 
 const styles = {
   card: {
-    border: "1px solid #ccc",
+    border: "1px solid #69f33aff",
     padding: "15px",
     margin: "10px 0",
     borderRadius: "8px",
