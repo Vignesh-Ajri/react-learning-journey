@@ -2,10 +2,10 @@
 
 ## 🔹 What are Props?
 
-* Props = short for properties.
-* Props are used to pass data from **parent → child component**.
-* They make components **dynamic and reusable**.
-* Props are **read-only** – child cannot modify them (unidirectional data flow).
+- Props = short for properties.
+- Props are used to pass data from **parent → child component**.
+- They make components **dynamic and reusable**.
+- Props are **read-only** – child cannot modify them (unidirectional data flow).
 
 ---
 
@@ -36,7 +36,7 @@ function FunctionalComponent({ name = "Guest" }) {
 **Usage:**
 
 ```jsx
-<FunctionalComponent />   // Output: Hello, Guest!
+<FunctionalComponent /> // Output: Hello, Guest!
 ```
 
 ### Example 3 – Accessing via props object
@@ -92,15 +92,15 @@ Welcome.defaultProps = {
 **Usage:**
 
 ```jsx
-<Welcome />   // Output: Hello, Guest
+<Welcome /> // Output: Hello, Guest
 ```
 
 ---
 
 ## 🔹 Children as Props
 
-* Every component has a special prop called **children**.
-* It represents the **content inside the opening and closing tags** of a component.
+- Every component has a special prop called **children**.
+- It represents the **content inside the opening and closing tags** of a component.
 
 ### Example – Card Component with Children
 
@@ -126,26 +126,26 @@ function Card({ title, children }) {
 
 ✅ **Output:**
 
-* Title: *Children Example*
-* Inside content: Paragraph + Button
+- Title: _Children Example_
+- Inside content: Paragraph + Button
 
 ---
 
 ## 🔹 Key Points about Props
 
-* Props make components **reusable**.
-* Data flows **parent → child** (unidirectional).
-* Props are **immutable** (cannot be changed inside child).
-* We can pass **strings, numbers, objects, arrays, functions, JSX, or components** as props.
-* **Children prop** allows wrapping content between component tags.
-* Default props can be defined for **both functional and class components**.
+- Props make components **reusable**.
+- Data flows **parent → child** (unidirectional).
+- Props are **immutable** (cannot be changed inside child).
+- We can pass **strings, numbers, objects, arrays, functions, JSX, or components** as props.
+- **Children prop** allows wrapping content between component tags.
+- Default props can be defined for **both functional and class components**.
 
 ---
 
 ## 🔹 Summary
 
-* **Props = data passed into a component.**
-* Can be used in both **functional** and **class** components.
-* **Default props** provide fallback values when none are passed.
-* **Children prop** allows composition (wrapping other elements/components).
-* Props keep components **flexible, reusable, and dynamic**.
+- **Props = data passed into a component.**
+- Can be used in both **functional** and **class** components.
+- **Default props** provide fallback values when none are passed.
+- **Children prop** allows composition (wrapping other elements/components).
+- Props keep components **flexible, reusable, and dynamic**.
