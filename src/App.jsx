@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Day01 from "./days/Day01-HelloWorld";
 import Day02 from "./days/Day02-JSX-Component";
 import { FunctionalComponent, ClassComponent, Card } from "./days/Day03-Props";
+import { CounterAppFunctional, CounterAppClass } from "./days/Day04-State";
 
 function App() {
   return (
@@ -50,8 +51,16 @@ function App() {
               </>
             }
           />
-          {/* <Route path="/day03" element={<Day03 />} />
-          <Route path="/day05" element={<Day05 />} /> */}
+          <Route
+            path="/day04"
+            element={
+              <>
+                <CounterAppFunctional />
+                <CounterAppClass />
+              </>
+            }
+          />
+          {/* <Route path="/day05" element={<Day05 />} /> */}
         </Routes>
       </div>
     </Router>
