@@ -1,10 +1,3 @@
-Perfect 👍 Let’s make your **Day 04 notes file super detailed** with explanations, comparisons, and examples.
-I’ll also expand the **`useState` vs `this.state` difference** clearly.
-
-Here’s your **Day04.md**:
-
----
-
 ````markdown
 # Day 04 – React State (useState & this.state) with Counter App
 
@@ -30,7 +23,7 @@ Here’s your **Day04.md**:
 React introduced **Hooks** in version 16.8.  
 The most common hook is **`useState`** for adding state to functional components.
 
-### ✅ Syntax
+### Syntax
 
 ```jsx
 const [state, setState] = useState(initialValue);
@@ -43,7 +36,7 @@ const [state, setState] = useState(initialValue);
 
 ---
 
-### ✅ Example: Counter App (Functional Component)
+### Example: Counter App (Functional Component)
 
 ```jsx
 import { useState } from "react";
@@ -75,7 +68,7 @@ export default CounterAppFunctional;
 
 Before Hooks, React used **class components** with `this.state` and `this.setState()`.
 
-### ✅ Syntax
+### Syntax
 
 ```jsx
 class ComponentName extends React.Component {
@@ -91,7 +84,7 @@ class ComponentName extends React.Component {
 
 ---
 
-### ✅ Example: Counter App (Class Component)
+### Example: Counter App (Class Component)
 
 ```jsx
 import React, { Component } from "react";
@@ -140,20 +133,20 @@ export default CounterAppClass;
 
 ## 🔹 When to Use What?
 
-- ✅ **Functional Components with Hooks (`useState`)**
+- **Functional Components with Hooks (`useState`)**
 
   - Modern React standard
   - Cleaner, shorter, easier to read
   - Works well with other hooks (`useEffect`, `useContext`, etc.)
 
-- ⚠️ **Class Components with this.state**
+- **Class Components with this.state**
 
   - Used in older React codebases
   - Still important to **understand for interviews** or legacy projects
 
 ---
 
-## 📌 Learning Recap
+## Learning Recap
 
 - **State** allows React components to track and update dynamic data.
 - **Functional Components (useState)** → clean & modern.
@@ -161,7 +154,3 @@ export default CounterAppClass;
 - The **Counter App** is the simplest example to practice both.
 
 ---
-
-```
-
-```
