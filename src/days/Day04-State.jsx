@@ -9,7 +9,9 @@ export function CounterAppFunctional() {
 
   return (
     <div className="flex flex-col items-center justify-center gap-4 p-5 m-5 border">
-      <h1 className="text-2xl font-bold">Counter App (Functional)</h1>
+      <h1 className="text-2xl font-bold">
+        Counter App (Functional) Using UseState
+      </h1>
       <p className="text-xl">Count: {count}</p>
       <div className="flex gap-2">
         <button
@@ -35,7 +37,6 @@ export function CounterAppFunctional() {
   );
 }
 
-
 export class CounterAppClass extends Component {
   constructor(props) {
     super(props);
@@ -49,7 +50,9 @@ export class CounterAppClass extends Component {
   render() {
     return (
       <div className="flex flex-col items-center justify-center gap-4 p-5 m-5 border">
-        <h1 className="text-2xl font-bold">Counter App (Class)</h1>
+        <h1 className="text-2xl font-bold">
+          Counter App (Class) Using this.state
+        </h1>
         <p className="text-xl">Count: {this.state.count}</p>
         <div className="flex gap-2">
           <button
