@@ -31,6 +31,9 @@ function App() {
             <li>
               <Link to="/day05">Day 05 - Events</Link>
             </li>
+            <li>
+              <Link to="/day06">Day 06 - Events</Link>
+            </li>
           </ul>
         </nav>
 
