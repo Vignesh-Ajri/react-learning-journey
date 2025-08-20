@@ -32,7 +32,7 @@ function App() {
               <Link to="/day05">Day 05 - Events</Link>
             </li>
             <li>
-              <Link to="/day06">Day 06 - Events</Link>
+              <Link to="/day06">Day 06 - Lists & keys </Link>
             </li>
           </ul>
         </nav>
