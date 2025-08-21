@@ -6,6 +6,7 @@ import Day02 from "./days/Day02-JSX-Component";
 import { FunctionalComponent, ClassComponent, Card } from "./days/Day03-Props";
 import { CounterAppFunctional, CounterAppClass } from "./days/Day04-State";
 import { ToggleTextFunctional, ToggleTextClass } from "./days/Day05-Events";
+import { TodoListFunctional, TodoListClass } from "./days/Day06-ListsAndKeys";
 
 function App() {
   return (
@@ -70,6 +71,15 @@ function App() {
               <>
                 <ToggleTextFunctional />
                 <ToggleTextClass />
+              </>
+            }
+          />
+          <Route
+            path="/day06"
+            element={
+              <>
+                <TodoListFunctional />
+                <TodoListClass />
               </>
             }
           />
