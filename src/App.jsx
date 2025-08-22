@@ -7,6 +7,7 @@ import { FunctionalComponent, ClassComponent, Card } from "./days/Day03-Props";
 import { CounterAppFunctional, CounterAppClass } from "./days/Day04-State";
 import { ToggleTextFunctional, ToggleTextClass } from "./days/Day05-Events";
 import { TodoListFunctional, TodoListClass } from "./days/Day06-ListsAndKeys";
+import InteractiveDay07 from "./days/Day07-ConditionalRendering";
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
             </li>
             <li>
               <Link to="/day06">Day 06 - Lists & keys </Link>
+            </li>
+            <li>
+              <Link to="/day07">Day 07 - Conditional Rendering </Link>
             </li>
           </ul>
         </nav>
@@ -80,6 +84,14 @@ function App() {
               <>
                 <TodoListFunctional />
                 <TodoListClass />
+              </>
+            }
+          />
+          <Route
+            path="/day07"
+            element={
+              <>
+                <InteractiveDay07 />
               </>
             }
           />
