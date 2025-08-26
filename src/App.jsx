@@ -9,6 +9,7 @@ import { ToggleTextFunctional, ToggleTextClass } from "./days/Day05-Events";
 import { TodoListFunctional, TodoListClass } from "./days/Day06-ListsAndKeys";
 import InteractiveDay07 from "./days/Day07-ConditionalRendering";
 import Day08StyledButton from "./days/Day08-StyledButton";
+import Counter from "./days/Day09-Tailwind-CSS";
 
 function App() {
   return (
@@ -42,6 +43,9 @@ function App() {
             </li>
             <li>
               <Link to="/day08">Day 08 - Styling in React </Link>
+            </li>
+            <li>
+              <Link to="/day09">Day 09 - Tailwind CSS </Link>
             </li>
           </ul>
         </nav>
@@ -93,6 +97,7 @@ function App() {
           />
           <Route path="/day07" element={<InteractiveDay07 />} />
           <Route path="/day08" element={<Day08StyledButton />} />
+          <Route path="/day09" element={<Counter />} />
         </Routes>
       </div>
     </Router>
