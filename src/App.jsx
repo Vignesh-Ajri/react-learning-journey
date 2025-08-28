@@ -51,6 +51,9 @@ function App() {
             <li>
               <Link to="/day10">Day 10 - UseEffect Hook </Link>
             </li>
+            <li>
+              <Link to="/day11">Day 11 - Forms & Controlled Components </Link>
+            </li>
           </ul>
         </nav>
 
@@ -103,6 +106,7 @@ function App() {
           <Route path="/day08" element={<Day08StyledButton />} />
           <Route path="/day09" element={<Counter />} />
           <Route path="/day10" element={<Posts />} />
+          <Route path="/day11" element={<Posts />} />
         </Routes>
       </div>
     </Router>
