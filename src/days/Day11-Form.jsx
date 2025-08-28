@@ -23,7 +23,7 @@ export default function Day11Form() {
   };
 
   return (
-    <div className="p-4 max-w-sm mx-auto border rounded-lg shadow">
+    <div className="p-4 max-w-sm mx-auto mt-5 border rounded-lg shadow">
       <h2 className="text-xl font-bold mb-4">Day 11 - Form</h2>
       <form onSubmit={handleSubmit} className="space-y-3">
         <div>

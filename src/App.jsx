@@ -11,6 +11,7 @@ import InteractiveDay07 from "./days/Day07-ConditionalRendering";
 import Day08StyledButton from "./days/Day08-StyledButton";
 import Counter from "./days/Day09-Tailwind-CSS";
 import Posts from "./days/Day10-UseEffect";
+import Day11Form from "./days/Day11-Form";
 
 function App() {
   return (
@@ -106,7 +107,7 @@ function App() {
           <Route path="/day08" element={<Day08StyledButton />} />
           <Route path="/day09" element={<Counter />} />
           <Route path="/day10" element={<Posts />} />
-          <Route path="/day11" element={<Posts />} />
+          <Route path="/day11" element={<Day11Form />} />
         </Routes>
       </div>
     </Router>
