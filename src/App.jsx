@@ -12,6 +12,7 @@ import Day08StyledButton from "./days/Day08-StyledButton";
 import Counter from "./days/Day09-Tailwind-CSS";
 import Posts from "./days/Day10-UseEffect";
 import Day11Form from "./days/Day11-Form";
+import TemperatureConverter from "./days/Day12-LiftingStateUp";
 
 function App() {
   return (
@@ -54,6 +55,9 @@ function App() {
             </li>
             <li>
               <Link to="/day11">Day 11 - Forms & Controlled Components </Link>
+            </li>
+            <li>
+              <Link to="/day12">Day 12 - Lifting State Up </Link>
             </li>
           </ul>
         </nav>
@@ -108,6 +112,7 @@ function App() {
           <Route path="/day09" element={<Counter />} />
           <Route path="/day10" element={<Posts />} />
           <Route path="/day11" element={<Day11Form />} />
+          <Route path="/day12" element={<TemperatureConverter />} />
         </Routes>
       </div>
     </Router>
