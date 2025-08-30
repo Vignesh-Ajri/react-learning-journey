@@ -13,6 +13,7 @@ import Counter from "./days/Day09-Tailwind-CSS";
 import Posts from "./days/Day10-UseEffect";
 import Day11Form from "./days/Day11-Form";
 import TemperatureConverter from "./days/Day12-LiftingStateUp";
+import DevToolsDemo from "./days/Day13-DevToolsDemo";
 
 function App() {
   return (
@@ -58,6 +59,11 @@ function App() {
             </li>
             <li>
               <Link to="/day12">Day 12 - Lifting State Up </Link>
+            </li>
+            <li>
+              <Link to="/day13">
+                Day 13 - React Developer Tools (Debugging)
+              </Link>
             </li>
           </ul>
         </nav>
@@ -113,6 +119,7 @@ function App() {
           <Route path="/day10" element={<Posts />} />
           <Route path="/day11" element={<Day11Form />} />
           <Route path="/day12" element={<TemperatureConverter />} />
+          <Route path="/day13" element={<DevToolsDemo />} />
         </Routes>
       </div>
     </Router>
