@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
+import NavBar from "./components/NavBar";
 import Day01 from "./days/Day01-HelloWorld";
 import Day02 from "./days/Day02-JSX-Component";
 import { FunctionalComponent, ClassComponent, Card } from "./days/Day03-Props";
@@ -14,6 +15,7 @@ import Posts from "./days/Day10-UseEffect";
 import Day11Form from "./days/Day11-Form";
 import TemperatureConverter from "./days/Day12-LiftingStateUp";
 import DevToolsDemo from "./days/Day13-DevToolsDemo";
+import ToDo from "./days/Day14-ToDoApp";
 
 function App() {
   return (
@@ -22,51 +24,7 @@ function App() {
         <Header />
 
         {/* Navigation */}
-        <nav>
-          <ul style={{ display: "flex", gap: "15px" }}>
-            <li>
-              <Link to="/day01">Day 01 - Hello World</Link>
-            </li>
-            <li>
-              <Link to="/day02">Day 02 - JSX & Components</Link>
-            </li>
-            <li>
-              <Link to="/day03">Day 03 - Props</Link>
-            </li>
-            <li>
-              <Link to="/day04">Day 04 - State</Link>
-            </li>
-            <li>
-              <Link to="/day05">Day 05 - Events</Link>
-            </li>
-            <li>
-              <Link to="/day06">Day 06 - Lists & keys </Link>
-            </li>
-            <li>
-              <Link to="/day07">Day 07 - Conditional Rendering </Link>
-            </li>
-            <li>
-              <Link to="/day08">Day 08 - Styling in React </Link>
-            </li>
-            <li>
-              <Link to="/day09">Day 09 - Tailwind CSS </Link>
-            </li>
-            <li>
-              <Link to="/day10">Day 10 - UseEffect Hook </Link>
-            </li>
-            <li>
-              <Link to="/day11">Day 11 - Forms & Controlled Components </Link>
-            </li>
-            <li>
-              <Link to="/day12">Day 12 - Lifting State Up </Link>
-            </li>
-            <li>
-              <Link to="/day13">
-                Day 13 - React Developer Tools (Debugging)
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <NavBar />
 
         {/* Routes */}
         <Routes>
@@ -120,6 +78,7 @@ function App() {
           <Route path="/day11" element={<Day11Form />} />
           <Route path="/day12" element={<TemperatureConverter />} />
           <Route path="/day13" element={<DevToolsDemo />} />
+          <Route path="/day14" element={<ToDo />} />
         </Routes>
       </div>
     </Router>
