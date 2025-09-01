@@ -16,6 +16,7 @@ import Day11Form from "./days/Day11-Form";
 import TemperatureConverter from "./days/Day12-LiftingStateUp";
 import DevToolsDemo from "./days/Day13-DevToolsDemo";
 import ToDo from "./days/Day14-ToDoApp";
+import Day15 from "./days/Day15-RouterBasics";
 
 function App() {
   return (
@@ -79,6 +80,7 @@ function App() {
           <Route path="/day12" element={<TemperatureConverter />} />
           <Route path="/day13" element={<DevToolsDemo />} />
           <Route path="/day14" element={<ToDo />} />
+          <Route path="/day15/*" element={<Day15 />} />
         </Routes>
       </div>
     </Router>

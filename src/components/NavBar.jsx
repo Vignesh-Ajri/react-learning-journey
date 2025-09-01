@@ -19,6 +19,7 @@ export default function ResponsiveNav() {
     { to: "/day12", label: "Day 12 - Lifting State Up" },
     { to: "/day13", label: "Day 13 - React Developer Tools" },
     { to: "/day14", label: "Day 14 - Simple ToDo App" },
+    { to: "/day15", label: "Day 15 - React Router Basics" },
   ];
 
   return (
