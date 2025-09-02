@@ -17,7 +17,7 @@ import TemperatureConverter from "./days/Day12-LiftingStateUp";
 import DevToolsDemo from "./days/Day13-DevToolsDemo";
 import ToDo from "./days/Day14-ToDoApp";
 import Day15 from "./days/Day15-RouterBasics";
-import Day15 from "./days/Day15-RouterBasics";
+import Day16 from "./days/Day16-NestedRoutes";
 
 function App() {
   return (
@@ -82,6 +82,7 @@ function App() {
           <Route path="/day13" element={<DevToolsDemo />} />
           <Route path="/day14" element={<ToDo />} />
           <Route path="/day15/*" element={<Day15 />} />
+          <Route path="/day16/*" element={<Day16 />} />
         </Routes>
       </div>
     </Router>
