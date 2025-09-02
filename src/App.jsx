@@ -17,6 +17,7 @@ import TemperatureConverter from "./days/Day12-LiftingStateUp";
 import DevToolsDemo from "./days/Day13-DevToolsDemo";
 import ToDo from "./days/Day14-ToDoApp";
 import Day15 from "./days/Day15-RouterBasics";
+import Day15 from "./days/Day15-RouterBasics";
 
 function App() {
   return (
