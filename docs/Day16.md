@@ -1,5 +1,3 @@
-
-```markdown
 # Day 16 – Nested Routes in React Router
 
 ## Overview
@@ -12,18 +10,16 @@ In this demo, we created:
 - `/day16/profile` → Profile page (parent)
 - `/day16/profile/settings` → Settings page (nested inside Profile)
 
----
-
-## File Structure
 ```
+## File Structure
 
 src/
 ├─ App.jsx
 ├─ Day16.jsx
 └─ index.jsx
 
-````
-
+```
+---
 - **App.jsx** → Top-level router with `/day16/*` route
 - **Day16.jsx** → Handles nested routes, default redirect, and layout
 - **Profile.jsx / Settings.jsx** → Components inside Day16.jsx
@@ -35,7 +31,12 @@ src/
 ### 1. App.jsx
 
 ```jsx
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Day16 from "./Day16";
 
 function App() {
@@ -51,7 +52,13 @@ function App() {
         {/* Catch-all 404 */}
         <Route
           path="*"
-          element={<div className="flex items-center justify-center min-h-screen"><h1 className="text-3xl font-bold text-gray-700">404 | Page Not Found</h1></div>}
+          element={
+            <div className="flex items-center justify-center min-h-screen">
+              <h1 className="text-3xl font-bold text-gray-700">
+                404 | Page Not Found
+              </h1>
+            </div>
+          }
         />
       </Routes>
     </Router>
@@ -59,7 +66,7 @@ function App() {
 }
 
 export default App;
-````
+```
 
 ---
 
@@ -140,7 +147,3 @@ export default App;
 2. Implement breadcrumbs dynamically showing current path.
 3. Experiment with **animated transitions** when switching between nested routes.
 4. Combine nested routes with **stateful UI** for a real dashboard experience.
-
-```
-
-```
