@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function ResponsiveNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,12 +32,16 @@ export default function ResponsiveNav() {
           <ul className="flex flex-wrap gap-6 py-4">
             {navItems.map((item) => (
               <li key={item.to}>
-                <Link
+                <NavLink
                   to={item.to}
-                  className="text-gray-600 hover:text-blue-600 transition-colors text-sm font-medium"
+                  className={({ isActive }) =>
+                    `${
+                      isActive ? "text-blue-600" : "text-gray-600"
+                    } hover:text-blue-600 transition-colors text-sm font-medium`
+                  }
                 >
                   {item.label}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -81,13 +85,17 @@ export default function ResponsiveNav() {
               <ul className="grid grid-cols-2 gap-2">
                 {navItems.map((item) => (
                   <li key={item.to}>
-                    <Link
+                    <NavLink
                       to={item.to}
-                      className="block px-3 py-2 rounded text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors text-sm text-center border border-gray-200"
+                      className={({ isActive }) =>
+                        `${
+                          isActive ? "text-blue-600" : "text-gray-600"
+                        } block px-3 py-2 rounded hover:text-blue-600 hover:bg-gray-50 transition-colors text-sm text-center border border-gray-200`
+                      }
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
-                    </Link>
+                    </NavLink>
                   </li>
                 ))}
               </ul>
