@@ -19,6 +19,7 @@ import ToDo from "./days/Day14-ToDoApp";
 import Day15 from "./days/Day15-RouterBasics";
 import Day16 from "./days/Day16-NestedRoutes";
 import Day17 from "./days/Day17-Navigation";
+import Day18 from "./days/Day18-API";
 
 function App() {
   return (
@@ -85,6 +86,7 @@ function App() {
           <Route path="/day15/*" element={<Day15 />} />
           <Route path="/day16/*" element={<Day16 />} />
           <Route path="/day17/*" element={<Day17 />} />
+          <Route path="/day18" element={<Day18 />} />
         </Routes>
       </div>
     </Router>
