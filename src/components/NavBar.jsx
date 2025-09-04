@@ -22,6 +22,7 @@ export default function ResponsiveNav() {
     { to: "/day15", label: "Day 15 - React Router Basics" },
     { to: "/day16", label: "Day 16 - Nested Routes" },
     { to: "/day17", label: "Day 17 - Navigation (Link, NavLink)" },
+    { to: "/day18", label: "Day 18 - API Integration (fetch / axios)" },
   ];
 
   return (
