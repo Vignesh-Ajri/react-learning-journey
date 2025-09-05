@@ -20,6 +20,7 @@ import Day15 from "./days/Day15-RouterBasics";
 import Day16 from "./days/Day16-NestedRoutes";
 import Day17 from "./days/Day17-Navigation";
 import Day18 from "./days/Day18-API";
+import Day19 from "./days/Day19-Loading-ErrorState";
 
 function App() {
   return (
@@ -87,6 +88,7 @@ function App() {
           <Route path="/day16/*" element={<Day16 />} />
           <Route path="/day17/*" element={<Day17 />} />
           <Route path="/day18" element={<Day18 />} />
+          <Route path="/day19" element={<Day19 />} />
         </Routes>
       </div>
     </Router>
