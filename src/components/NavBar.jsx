@@ -23,6 +23,7 @@ export default function ResponsiveNav() {
     { to: "/day16", label: "Day 16 - Nested Routes" },
     { to: "/day17", label: "Day 17 - Navigation (Link, NavLink)" },
     { to: "/day18", label: "Day 18 - API Integration (fetch / axios)" },
+    { to: "/day19", label: "Day 19 - Loading & Error States" },
   ];
 
   return (
