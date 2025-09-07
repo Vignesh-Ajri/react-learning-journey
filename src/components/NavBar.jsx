@@ -25,6 +25,7 @@ export default function ResponsiveNav() {
     { to: "/day18", label: "Day 18 - API Integration (fetch / axios)" },
     { to: "/day19", label: "Day 19 - Loading & Error States" },
     { to: "/day20", label: "Day 20 - Custom Hooks" },
+    { to: "/day21", label: "Day 21 - A Simple WeatherApp" },
   ];
 
   return (
