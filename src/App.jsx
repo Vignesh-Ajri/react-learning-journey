@@ -23,6 +23,7 @@ import Day18 from "./days/Day18-API";
 import Day19 from "./days/Day19-Loading-ErrorState";
 import Day20 from "./days/Day20-CustomHooks";
 import Day21 from "./days/Day21-WeatherApp";
+import Day22 from "./days/Day22-ContextApi";
 
 function App() {
   return (
@@ -93,6 +94,7 @@ function App() {
           <Route path="/day19" element={<Day19 />} />
           <Route path="/day20" element={<Day20 />} />
           <Route path="/day21" element={<Day21 />} />
+          <Route path="/day22" element={<Day22 />} />
         </Routes>
       </div>
     </Router>
