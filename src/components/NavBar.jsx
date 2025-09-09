@@ -27,6 +27,7 @@ export default function ResponsiveNav() {
     { to: "/day20", label: "Day 20 - Custom Hooks" },
     { to: "/day21", label: "Day 21 - A Simple WeatherApp" },
     { to: "/day22", label: "Day 22 - React Context API" },
+    { to: "/day23", label: "Day 23 - useReducer" },
   ];
 
   return (
