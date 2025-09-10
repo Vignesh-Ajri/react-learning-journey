@@ -25,6 +25,7 @@ import Day20 from "./days/Day20-CustomHooks";
 import Day21 from "./days/Day21-WeatherApp";
 import Day22 from "./days/Day22-ContextApi";
 import Day23 from "./days/Day23-useReducer"
+import Day24 from './days/Day24-LocalStorage'
 
 function App() {
   return (
@@ -97,6 +98,7 @@ function App() {
           <Route path="/day21" element={<Day21 />} />
           <Route path="/day22" element={<Day22 />} />
           <Route path="/day23" element={<Day23 />} />
+          <Route path="/day24" element={<Day24 />} />
         </Routes>
       </div>
     </Router>
