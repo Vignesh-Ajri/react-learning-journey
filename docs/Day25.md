@@ -1,4 +1,4 @@
-# 🚀 Day 45: Performance Optimizations in React
+# 🚀 Day 25: Performance Optimizations in React
 
 React apps re-render components whenever state or props change. While this is usually fine, **unnecessary re-renders or expensive calculations** can slow down your app.
 
