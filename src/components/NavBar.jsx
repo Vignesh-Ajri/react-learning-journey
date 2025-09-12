@@ -30,6 +30,7 @@ export default function ResponsiveNav() {
     { to: "/day23", label: "Day 23 - useReducer" },
     { to: "/day24", label: "Day 24 - Learn localStorage usage in React" },
     { to: "/day25", label: "Day 25 - Learn Performance Optimizations" },
+    { to: "/day26", label: "Day 26 - Error Boundaries" },
   ];
 
   return (
