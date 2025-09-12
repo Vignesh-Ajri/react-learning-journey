@@ -36,7 +36,7 @@ function BuggyComponent() {
 
 export default function Day26() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-6">
+    <div className="flex flex-col items-center justify-center bg-gray-50 p-6">
       <div className="max-w-xl w-full bg-white shadow-lg rounded-2xl p-6">
         <h1 className="text-2xl font-bold text-gray-800 mb-4">
           Error Boundary Example
