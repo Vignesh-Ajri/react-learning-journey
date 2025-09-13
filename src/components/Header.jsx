@@ -22,7 +22,7 @@ const Header = () => {
             <Github size={24} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/vignesh-s-a1271724a/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
