@@ -27,7 +27,8 @@ import Day22 from "./days/Day22-ContextApi";
 import Day23 from "./days/Day23-useReducer";
 import Day24 from "./days/Day24-LocalStorage";
 import Day25 from "./days/Day25-PerformanceOptimizations";
-import Day26 from "./days/Day26-ErrorBoundaries"
+import Day26 from "./days/Day26-ErrorBoundaries";
+import UserCard from "./days/Day27-PropTypes";
 
 function App() {
   return (
@@ -103,6 +104,10 @@ function App() {
           <Route path="/day24" element={<Day24 />} />
           <Route path="/day25" element={<Day25 />} />
           <Route path="/day26" element={<Day26 />} />
+          <Route
+            path="/day27"
+            element={<UserCard name={"Guest"} age={18} isAdmin={true} />}
+          />
         </Routes>
       </div>
     </Router>
