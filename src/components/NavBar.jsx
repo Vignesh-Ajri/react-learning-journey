@@ -32,6 +32,7 @@ export default function ResponsiveNav() {
     { to: "/day25", label: "Day 25 - Learn Performance Optimizations" },
     { to: "/day26", label: "Day 26 - Error Boundaries" },
     { to: "/day27", label: "Day 27 - PropTypes in React" },
+    { to: "/day28", label: "Day 28 - Simple Quiz app" },
   ];
 
   return (
