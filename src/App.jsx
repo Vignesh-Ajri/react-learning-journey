@@ -29,6 +29,7 @@ import Day24 from "./days/Day24-LocalStorage";
 import Day25 from "./days/Day25-PerformanceOptimizations";
 import Day26 from "./days/Day26-ErrorBoundaries";
 import UserCard from "./days/Day27-PropTypes";
+import QuizApp from "./days/Day28-QuizApp";
 
 function App() {
   return (
@@ -108,6 +109,7 @@ function App() {
             path="/day27"
             element={<UserCard name={"Guest"} age={18} isAdmin={true} />}
           />
+          <Route path="/day28" element={<QuizApp />} />
         </Routes>
       </div>
     </Router>
