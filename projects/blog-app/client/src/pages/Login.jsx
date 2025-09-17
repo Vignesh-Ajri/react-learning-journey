@@ -1,184 +1,75 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import {
-  ArrowLeft,
-  Eye,
-  EyeOff,
-  Mail,
-  Lock,
-  User,
-  AlertCircle,
-  CheckCircle,
-} from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
-const LoginPage = ({ onLogin }) => {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [loading, setLoading] = useState(false);
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-    setError(""); // Clear error when user starts typing
-  };
-
-  const handleSubmit = async () => {
-    setLoading(true);
-    setError("");
-
+  const handleLogin = async (e) => {
+    e.preventDefault();
     try {
-      // Simulate API call to JSON Server
-      const response = await fetch("http://localhost:3001/users");
-      const users = await response.json();
-
-      const user = users.find(
-        (u) => u.email === formData.email && u.password === formData.password
+      const res = await fetch(
+        `http://localhost:3001/users?email=${email}&password=${password}`
       );
-
-      if (user) {
-        // Successful login
-        localStorage.setItem("user", JSON.stringify(user));
-        onLogin && onLogin(user);
+      const data = await res.json();
+      if (data.length > 0) {
+        localStorage.setItem("user", JSON.stringify(data[0]));
+        navigate("/");
       } else {
         setError("Invalid email or password");
       }
-    } catch (err) {
-      setError("Login failed. Please try again.");
-    } finally {
-      setLoading(false);
+    } catch {
+      setError("Login failed, please try again");
     }
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-6">
-      <div className="max-w-md w-full">
-        {/* Back Button */}
-        <Link
-          to="/"
-          className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors mb-8"
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-600">
+      <Link
+        to="/"
+        className="inline-block px-6 py-3 mt-6 mb-3 bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-gray-100 font-medium rounded-lg hover:shadow-lg hover:scale-105 transition-transform duration-200"
+      >
+        ← Back To Home
+      </Link>
+      <form
+        onSubmit={handleLogin}
+        className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md w-full max-w-md"
+      >
+        <h2 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-gray-100">
+          Login
+        </h2>
+        {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full mb-4 px-4 py-2 border rounded-lg dark:bg-gray-700 dark:text-gray-100"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="w-full mb-4 px-4 py-2 border rounded-lg dark:bg-gray-700 dark:text-gray-100"
+          required
+        />
+        <button
+          type="submit"
+          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg"
         >
-          <ArrowLeft className="w-5 h-5" />
-          Back to Home
-        </Link>
-
-        {/* Login Form */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-          <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-              Welcome Back
-            </h1>
-            <p className="text-gray-600 dark:text-gray-400">
-              Sign in to your account
-            </p>
-          </div>
-
-          {error && (
-            <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg flex items-center gap-3">
-              <AlertCircle className="w-5 h-5 text-red-600 dark:text-red-400" />
-              <span className="text-red-700 dark:text-red-300 text-sm">
-                {error}
-              </span>
-            </div>
-          )}
-
-          <div className="space-y-6">
-            {/* Email Field */}
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
-              >
-                Email Address
-              </label>
-              <div className="relative">
-                <Mail className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                  placeholder="Enter your email"
-                  required
-                />
-              </div>
-            </div>
-
-            {/* Password Field */}
-            <div>
-              <label
-                htmlFor="password"
-                className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
-              >
-                Password
-              </label>
-              <div className="relative">
-                <Lock className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
-                <input
-                  type={showPassword ? "text" : "password"}
-                  id="password"
-                  name="password"
-                  value={formData.password}
-                  onChange={handleInputChange}
-                  className="w-full pl-10 pr-12 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                  placeholder="Enter your password"
-                  required
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-                >
-                  {showPassword ? (
-                    <EyeOff className="w-5 h-5" />
-                  ) : (
-                    <Eye className="w-5 h-5" />
-                  )}
-                </button>
-              </div>
-            </div>
-
-            {/* Submit Button */}
-            <button
-              type="button"
-              onClick={handleSubmit}
-              disabled={loading}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-            >
-              {loading ? (
-                <>
-                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  Signing in...
-                </>
-              ) : (
-                "Sign In"
-              )}
-            </button>
-          </div>
-
-          {/* Switch to Register */}
-          <div className="mt-8 text-center">
-            <p className="text-gray-600 dark:text-gray-400">
-              Don't have an account?{" "}
-              <Link
-                to="/register"
-                className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold"
-              >
-                Sign up
-              </Link>
-            </p>
-          </div>
-        </div>
-      </div>
+          Login
+        </button>
+        <p
+          onClick={() => navigate("/register")}
+          className="text-sm mt-4 text-blue-600 dark:text-blue-400 cursor-pointer text-center"
+        >
+          Don’t have an account? Register
+        </p>
+      </form>
     </div>
   );
-};
-
-export default LoginPage;
+}

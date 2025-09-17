@@ -147,13 +147,13 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-800">
       {/* Header */}
       <Header openModal={() => openModal()} />
 
       {/* Filters */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="bg-white rounded-xl shadow-md p-6 flex flex-col md:flex-row gap-4">
+        <div className="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 flex flex-col md:flex-row gap-4">
           <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
           <CategoryFilter
             categories={categories}

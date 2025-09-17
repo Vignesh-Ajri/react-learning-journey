@@ -1,3 +1,23 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "id": 1758100707641,
+      "title": "Nothing",
+      "author": "Vignesh",
+      "category": "technology",
+      "excerpt": "sslf",
+      "content": "ddvcgbd",
+      "image": "",
+      "date": "2025-09-17"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Test User",
+      "email": "test@example.com",
+      "password": "123456"
+    }
+  ]
+  
 }

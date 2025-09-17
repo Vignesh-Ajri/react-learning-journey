@@ -9,18 +9,22 @@ export default function ViewPostModal({
   if (!isViewModalOpen || !selectedPost) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="sticky top-0 bg-white border-b px-6 py-4 flex items-center justify-between">
-          <h2 className="text-2xl font-bold">Post Details</h2>
+    <div className="fixed inset-0 bg-gray-400 dark:bg-gray-600 dark:bg-opacity-70 bg-opacity-50 flex items-center justify-center p-4 z-50">
+      <div className="bg-white dark:bg-gray-900 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-lg">
+        {/* Header */}
+        <div className="sticky top-0 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-4 flex items-center justify-between">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+            Post Details
+          </h2>
           <button
             onClick={closeViewModal}
-            className="text-gray-400 hover:text-gray-600"
+            className="text-gray-400 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
           >
             <X className="w-6 h-6" />
           </button>
         </div>
 
+        {/* Body */}
         <div className="p-6">
           {selectedPost.image && (
             <img
@@ -33,7 +37,8 @@ export default function ViewPostModal({
             />
           )}
 
-          <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+          {/* Meta Info */}
+          <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
             <span className="inline-flex items-center gap-1">
               <User className="w-4 h-4" />
               {selectedPost.author}
@@ -48,26 +53,29 @@ export default function ViewPostModal({
             </span>
           </div>
 
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">
+          {/* Title */}
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             {selectedPost.title}
           </h1>
 
+          {/* Content */}
           <div className="prose max-w-none">
-            <p className="text-lg text-gray-600 mb-6 italic">
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 italic">
               {selectedPost.excerpt}
             </p>
-            <div className="text-gray-700 whitespace-pre-wrap">
+            <div className="text-gray-700 dark:text-gray-200 whitespace-pre-wrap">
               {selectedPost.content}
             </div>
           </div>
 
-          <div className="flex justify-end gap-3 mt-8 pt-6 border-t">
+          {/* Actions */}
+          <div className="flex justify-end gap-3 mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
             <button
               onClick={() => {
                 closeViewModal();
                 openModal(selectedPost);
               }}
-              className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 flex items-center gap-2"
+              className="px-6 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center gap-2"
             >
               <Edit2 className="w-4 h-4" />
               Edit Post
