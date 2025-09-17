@@ -1,5 +1,6 @@
 import { Plus } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import LogoutButton from "./Logout";
 
 export default function Header({ openModal }) {
   return (
@@ -23,6 +24,7 @@ export default function Header({ openModal }) {
               <Plus className="w-5 h-5" />
               New Post
             </button>
+            <LogoutButton />
           </div>
         </div>
       </div>

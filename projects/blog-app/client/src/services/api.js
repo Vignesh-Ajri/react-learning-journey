@@ -1,13 +1,13 @@
 const API_URL = "http://localhost:5000/posts";
 
-// 📌 Get all posts
+// Get all posts
 export const fetchPosts = async () => {
   const res = await fetch(API_URL);
   if (!res.ok) throw new Error("Failed to fetch posts");
   return res.json();
 };
 
-// 📌 Create a new post
+// Create a new post
 export const createPost = async (post) => {
   const res = await fetch(API_URL, {
     method: "POST",
@@ -22,7 +22,7 @@ export const createPost = async (post) => {
   return res.json();
 };
 
-// 📌 Update an existing post
+// Update an existing post
 export const updatePost = async (post) => {
   const res = await fetch(`${API_URL}/${post.id}`, {
     method: "PUT",
@@ -33,7 +33,7 @@ export const updatePost = async (post) => {
   return res.json();
 };
 
-// 📌 Delete a post
+// Delete a post
 export const deletePost = async (id) => {
   const res = await fetch(`${API_URL}/${id}`, {
     method: "DELETE",
